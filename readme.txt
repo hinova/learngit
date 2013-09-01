@@ -94,3 +94,39 @@ Switched to branch 'dev'
 $ git branch
 * dev
   master
+  
+dev分支的工作完成，我们就可以切换回master分支
+$ git checkout master
+Switched to branch 'master'
+
+
+我们把dev分支的工作成果合并到master分支上
+PS F:\gitwork\learngit> git merge dev
+Updating 59e0b79..3709b9e
+Fast-forward
+ readme.txt | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+PS F:\gitwork\learngit> git branch
+  dev
+* master
+
+合并完成后，就可以放心地删除dev分支了
+$ git branch -d dev
+Deleted branch dev (was fec145a).
+
+$ git branch
+* master
+
+Git鼓励大量使用分支：
+
+查看分支：git branch
+
+创建分支：git branch name
+
+切换分支：git checkout name
+
+创建+切换分支：git checkout -b name
+
+合并某分支到当前分支：git merge name
+
+删除分支：git branch -d name
