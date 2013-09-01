@@ -144,3 +144,44 @@ $ git log --graph --pretty=oneline --abbrev-commit
 
 Git会用“Fast forward”模式，但这种模式下，删除分支后，会丢掉分支信息
 DEV...
+准备合并dev分支，请注意--no-ff参数，表示禁用“Fast forward”：
+git merge --no-ff -m "merge with no-ff" dev
+git log --graph --pretty=oneline --abbrev-commit
+
+分支策略
+在实际开发中，我们应该按照几个基本原则进行分支管理：
+
+首先，master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；
+
+那在哪干活呢？干活都在dev分支上，也就是说，dev分支是不稳定的，到某个时候，比如1.0版本发布时，再把dev分支合并到master上，在master分支发布1.0版本；
+
+你和你的小伙伴们每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就可以了。
+
+所以，团队合作的分支看起来就像这样：
+
+
+PS F:\gitwork\learngit> git merge --no-ff -m "merge with no-ff" dev
+Merge made by the 'recursive' strategy.
+ readme.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+PS F:\gitwork\learngit> git branch
+  dev
+* master
+PS F:\gitwork\learngit> git log --graph --pretty=oneline --abbrev-commit
+*   5967648 merge with no-ff
+|\
+| * e9c462c add dev text
+|/
+* 9133b00 xxxxxxxxxx
+* 956067a 合并分支
+*   2bb3748 conflict fixed
+|\
+| * cc1c52c branch
+| * 1532588 branch
+* | 8dc0b56 master
+|/
+* dfb4c3e merge dev
+* 3709b9e add branch
+* 59e0b79  add
+* 0861bbd add git push
+* 5df5bac add readme.txt
