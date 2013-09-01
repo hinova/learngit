@@ -131,27 +131,13 @@ Git鼓励大量使用分支：
 
 删除分支：git branch -d name
 
-删除分支：git branch -d name
-删除分支：git branch -d name
-删除分支：git branch -d name
-删除分支：git branch -d name
-删除分支：git branch -d name
-删除分支：git branch -d name
-删除分支：git branch -d name
-删除分支：git branch -d name
-删除分支：git branch -d name
-删除分支：git branch -d name
-删除分支：git branch -d name
-删除分支：git branch -d name
-
-
-分支上的……………………。
-
-分支上的……………………。
-
-分支上的……………………。
-
-分支上的……………………。
-
+$ git log --graph --pretty=oneline --abbrev-commit
+*   59bc1cb conflict fixed
+|\
+| * 75a857c AND simple
+* | 400b400 & simple
+|/
+* fec145a branch test
+...
 
 
