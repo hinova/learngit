@@ -130,6 +130,7 @@ Git鼓励大量使用分支：
 合并某分支到当前分支：git merge name
 
 删除分支：git branch -d name
+
 删除分支：git branch -d name
 删除分支：git branch -d name
 删除分支：git branch -d name
@@ -142,4 +143,15 @@ Git鼓励大量使用分支：
 删除分支：git branch -d name
 删除分支：git branch -d name
 删除分支：git branch -d name
+
+
+分支上的……………………。
+
+分支上的……………………。
+
+分支上的……………………。
+
+分支上的……………………。
+
+
 
