@@ -131,6 +131,7 @@ Git鼓励大量使用分支：
 
 删除分支：git branch -d name
 
+用带参数的git log也可以看到分支的合并情况：
 $ git log --graph --pretty=oneline --abbrev-commit
 *   59bc1cb conflict fixed
 |\
