@@ -79,3 +79,18 @@ Push an existing repository from the command line
 
 git remote add origin https://github.com/hinova/java.git
 git push -u origin master
+
+
+创建dev分支，然后切换到dev分支
+$ git checkout -b dev
+Switched to a new branch 'dev'
+
+git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+$ git branch dev
+$ git checkout dev
+Switched to branch 'dev'
+
+用git branch命令查看当前分支
+$ git branch
+* dev
+  master
